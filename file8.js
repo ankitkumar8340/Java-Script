@@ -33,6 +33,11 @@ function f1(){
 f1()
 console.log(a)
 
+firstName="Ankit";
+first_name="Ankit";
+
+FirstName="Ankit"
+
 
 
 
