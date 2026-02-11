@@ -13,8 +13,8 @@ greet("Ankesh")
 function add(x, y){
     console.log(x+y);
 }
-add(2,3);
-
+let result = add(2,3);
+console.log(result);
 
 
 
