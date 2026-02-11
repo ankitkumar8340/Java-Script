@@ -9,7 +9,14 @@ cart = [...cart, {name:"Speaker", price:4400, qty:2}]
 console.log(cart)
 
 
+const order ={
+    email:"john@gmail.com",
+    items:cart,
+    orderValue:48400,
+    status:"pending"
+}
 
+//db.orders.insertOne(order)
 
 
 
