@@ -59,21 +59,49 @@ function addToCart(id){
    
 }
 function increment(id){
-    const product = products.find((product)=>(
+    const product = cart.find((product)=>(
         product.id===id
     ))
-    cart.push({...product, qty:qty+1})
+    product.qty++;
+    // cart.push({qty:qty+1})
 }
+
+function placeOrder(){
+
+    let totalOrderValue = 0;
+
+    for(let i = 0; i < cart.length; i++){
+        totalOrderValue += cart[i].price * cart[i].qty;
+    }
+
+    const order ={
+        order_id: Date.now(),
+        email: "john@gmail.com",
+        orderValue: totalOrderValue,
+        items: cart
+    }
+    
+    console.log(order)
+    // return order
+}
+
 
 
 addToCart(1)
 addToCart(3)
-addToCart(5)
-console.log(cart)
+addToCart(4)
+// console.log(cart)
 increment(1)
 increment(4)
-console.log(cart)
+// console.log(cart)
 
+placeOrder()
+
+// const order = {
+//     email:"john@gmail.com",
+//     items:cart,
+//     orderValue
+// }
 
 
 
