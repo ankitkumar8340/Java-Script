@@ -80,11 +80,24 @@ function placeOrder(){
         orderValue: totalOrderValue,
         items: cart
     }
-    
-    console.log(order)
+    console.log("Order placed successfully")
+    // console.log(order)
+    console.log(order.order_id, order.email, order.orderValue)
+    order.items.forEach((or)=>{
+        console.log(`Order_id: ${or.id} name: ${or.name} description: ${or.desc} price: ${or.price} category: ${or.category} qty: ${or.qty}`)
+    })
+    console.log("product total", totalOrderValue)
+    console.log("total order placed ", totalOrderValue)
     // return order
-}
+    
 
+
+}
+// console.log("Flipkart")
+//     products.forEach((product)=>{
+//         console.log(`Product id: ${product.id} - Product name: ${product.name} Product description ${product.desc} - Product Price: ${product.price}`)
+
+//     })
 
 
 addToCart(1)
@@ -102,6 +115,8 @@ placeOrder()
 //     items:cart,
 //     orderValue
 // }
+
+
 
 
 
