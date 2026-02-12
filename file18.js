@@ -13,15 +13,10 @@ products.forEach((product) => {
     // cart = [...cart,product]
 });
 
-    const obj = {
-        ...product,
-        quantity:1,
-        total:product.price * product.quantity,
-    };
-    cart =[...cart,product]
-
-
-
-
+    // const obj = {
+    //     ...product,
+    //     quantity:1,
+    // };
+    // cart =[...cart,product]
 
 console.log(cart)
