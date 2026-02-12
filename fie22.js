@@ -47,19 +47,31 @@ const products = [
   },
 ];
 
+let qty=1;
 const cart = []
 function addToCart(id){
     const product = products.find((product) => product.id===id)
     
     if(product){
-        cart.push(product);
-        // cart.push({...product});
+        // cart.push(product);
+        cart.push({...product, qty:1});
     }
    
 }
+function increment(id){
+    const product = products.find((product)=>(
+        product.id===id
+    ))
+    cart.push({...product, qty:qty+1})
+}
+
+
 addToCart(1)
 addToCart(3)
 addToCart(5)
+console.log(cart)
+increment(1)
+increment(4)
 console.log(cart)
 
 
