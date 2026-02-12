@@ -9,7 +9,19 @@ let cart = []
 products.forEach((product) => {
     product.quantity = 1
     product.total = product.price * product.quantity
-    //cart.push(product)
-    cart = [...cart,product]
+    cart.push(product)
+    // cart = [...cart,product]
 });
+
+    const obj = {
+        ...product,
+        quantity:1,
+        total:product.price * product.quantity,
+    };
+    cart =[...cart,product]
+
+
+
+
+
 console.log(cart)
