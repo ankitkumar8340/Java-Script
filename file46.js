@@ -6,10 +6,10 @@ const students = [
 function getStudent(id) {
     return new Promise((res, rej) => {
         setTimeout(() => {
-            const found = students.id((std)=> std.id===id);
+            const found = students.find((std)=> std.id===id);
             if(found) res("Student Info")
             else rej("Not Found")
-            res(std)
+            // res(std)
             // const userObj = {
             //     name: "Ankit",
             //     email: "ankitkumarswe01@gmail.com",
@@ -26,7 +26,7 @@ function getAttendanceInfo(id) {
         setTimeout(() => {
             const attendance = students.find((std)=> std.id== id);
             if(attendance) {
-                console.log(attendance)
+                // console.log(attendance)
                 res(attendance)
             }
             
@@ -36,10 +36,14 @@ function getAttendanceInfo(id) {
 }
 
 function getExaminationInfo(id) {
-    return new Promise((res) => {
+    return new Promise((res,rej) => {
         setTimeout(() => {
-            const student = 
-            res("Examination info resilved")
+            const student = students.find((std) => std.id===id);
+            if(student.score > 70){
+                res("Pass")
+            }
+            else rej("fail")
+            // res("Examination info resilved")
         }, 2000)
     })
 }
@@ -62,7 +66,7 @@ async function main() {
 
 
 
-        displayStudent(result[0])
+        // displayStudent(result[0])
         // result.foreach((a)=>{
         //     console.log(a)
         // })
